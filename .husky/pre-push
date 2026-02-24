@@ -1,7 +1,11 @@
 #!/usr/bin/env sh
 set -e
 
+# GUI Git clients (Fork, Sourcetree) may not load your shell PATH.
+if [ -d "$HOME/.volta/bin" ]; then
+  export PATH="$HOME/.volta/bin:$PATH"
+fi
+
 npm run lint
 npm run stylelint
 npm run format:check
-

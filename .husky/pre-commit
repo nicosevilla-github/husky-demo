@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 set -e
 
-npx lint-staged
+# GUI Git clients (Fork, Sourcetree) may not load your shell PATH.
+if [ -d "$HOME/.volta/bin" ]; then
+  export PATH="$HOME/.volta/bin:$PATH"
+fi
 
+npx lint-staged
