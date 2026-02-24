@@ -2,6 +2,7 @@
 
 Reference project showing how to wire Husky for Vue projects so commits automatically run linters and formatters.
 For project history and notable updates, see `CHANGELOG.md`.
+When you update this demo, add a corresponding entry to `CHANGELOG.md`.
 
 ## What this demo includes
 
@@ -52,6 +53,11 @@ npm run format:file -- src/styles/manual-format-demo.scss
 ```
 
 Lint coverage includes `*.js` and `*.ts` (plus Vue SFC scripts).
+
+## Standardized formatting rules
+
+- Prettier settings live in `.prettierrc.json` (100-char width, semicolons, single quotes, trailing commas, LF endings).
+- Stylelint settings live in `.stylelintrc.cjs` (Vue + SCSS support, modern color notation, no `!important`, practical nested-selector handling).
 
 ## CI (GitHub Actions)
 

@@ -14,6 +14,12 @@ All notable changes to this Husky demo project are documented in this file.
 - README troubleshooting section for GUI Git client PATH issues and emergency hook bypass commands.
 - This changelog file for implementation awareness.
 
+### Changed
+
+- Standardized Prettier configuration in `.prettierrc.json` for explicit team-wide formatting defaults.
+- Standardized Stylelint configuration in `.stylelintrc.cjs` for Vue + SCSS projects (modern color syntax, no `!important`, practical ignore rules).
+- Added README guidance describing standardized Prettier and Stylelint settings.
+
 ## [2026-02-24]
 
 ### Added
