@@ -8,6 +8,7 @@ Reference project showing how to wire Husky for Vue projects so commits automati
 - ESLint for JS/TS/Vue files.
 - Stylelint for CSS/SCSS/Vue style blocks.
 - Prettier for consistent formatting.
+- Vite SCSS configured with the modern Sass API (avoids `legacy-js-api` deprecation warnings).
 - Husky hooks:
   - `pre-commit` runs `lint-staged` on staged files only.
   - `pre-push` runs full checks (`lint`, `stylelint`, `format:check`).
