@@ -6,11 +6,11 @@ import pluginVue from 'eslint-plugin-vue';
 
 export default [
   {
-    ignores: ['dist/**', 'node_modules/**']
+    ignores: ['dist/**', 'node_modules/**', '.stylelintrc.cjs'],
   },
   {
     ...js.configs.recommended,
-    files: ['**/*.{js,mjs,cjs}']
+    files: ['**/*.{js,mjs,cjs}'],
   },
   ...pluginVue.configs['flat/recommended'],
   {
@@ -20,32 +20,33 @@ export default [
       sourceType: 'module',
       globals: {
         ...globals.browser,
-        ...globals.node
-      }
+        ...globals.node,
+      },
     },
     rules: {
       'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'vue/multi-word-component-names': 'off'
-    }
+      'vue/multi-word-component-names': 'off',
+      'vue/max-attributes-per-line': 'off',
+    },
   },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      parser: tsParser
+      parser: tsParser,
     },
     plugins: {
-      '@typescript-eslint': tsPlugin
+      '@typescript-eslint': tsPlugin,
     },
     rules: {
-      ...tsPlugin.configs.recommended.rules
-    }
+      ...tsPlugin.configs.recommended.rules,
+    },
   },
   {
     files: ['**/*.vue'],
     languageOptions: {
       parserOptions: {
-        parser: tsParser
-      }
-    }
-  }
+        parser: tsParser,
+      },
+    },
+  },
 ];

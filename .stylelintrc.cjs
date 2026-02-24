@@ -3,12 +3,11 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.vue'],
-      customSyntax: 'postcss-html'
-    }
+      customSyntax: 'postcss-html',
+    },
   ],
   rules: {
     'at-rule-no-unknown': null,
-    'scss/at-rule-no-unknown': true
-  }
+    'scss/at-rule-no-unknown': true,
+  },
 };
-

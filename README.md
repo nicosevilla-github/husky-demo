@@ -17,6 +17,8 @@ Reference project showing how to wire Husky for Vue projects so commits automati
 
 ## Install and run
 
+Requires Node `^20.19.0` or newer (Vite 7 requirement).
+
 ```bash
 npm install
 npm run prepare
@@ -71,7 +73,7 @@ git commit -m "demo: show husky pre-commit checks"
 1. Install tools:
 
 ```bash
-npm i -D husky lint-staged eslint eslint-plugin-vue @eslint/js @typescript-eslint/parser @typescript-eslint/eslint-plugin typescript globals prettier stylelint stylelint-config-standard-scss postcss-html sass
+npm i -D husky lint-staged eslint eslint-plugin-vue vue-eslint-parser @eslint/js @typescript-eslint/parser @typescript-eslint/eslint-plugin typescript globals prettier stylelint stylelint-config-standard-scss postcss-html sass
 ```
 
 2. Add scripts in `package.json`:
