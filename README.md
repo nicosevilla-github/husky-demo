@@ -1,6 +1,7 @@
 # Husky + Vue Demo
 
 Reference project showing how to wire Husky for Vue projects so commits automatically run linters and formatters.
+For project history and notable updates, see `CHANGELOG.md`.
 
 ## What this demo includes
 
@@ -51,6 +52,17 @@ npm run format:file -- src/styles/manual-format-demo.scss
 ```
 
 Lint coverage includes `*.js` and `*.ts` (plus Vue SFC scripts).
+
+## CI (GitHub Actions)
+
+This repo includes a CI workflow at `.github/workflows/ci.yml` that runs on push and pull requests.
+
+Checks executed in CI:
+
+- `npm run lint`
+- `npm run stylelint`
+- `npm run format:check`
+- `npm run build`
 
 ## Suggested demo flow for other developers
 
@@ -107,4 +119,34 @@ Expected output:
 
 ```text
 .husky
+```
+
+## Troubleshooting
+
+### Fork or GUI Git client fails with Node dylib / PATH errors
+
+If a GUI client does not load your shell profile, Husky may resolve a broken system Node binary.
+This project’s hooks prepend Volta automatically when available.
+
+Verify what Node is being used:
+
+```bash
+node -v
+which node
+```
+
+### Temporarily bypass hooks (emergency only)
+
+```bash
+git commit --no-verify
+git push --no-verify
+```
+
+Use this only when blocked and run quality checks manually before opening a PR:
+
+```bash
+npm run lint
+npm run stylelint
+npm run format:check
+npm run build
 ```
