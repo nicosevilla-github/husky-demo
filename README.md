@@ -18,6 +18,9 @@ Reference project showing how to wire Husky for Vue projects so commits automati
 ## Install and run
 
 Requires Node `^20.19.0` or newer (Vite 7 requirement).
+This repo pins runtime tooling with Volta (`node@20.20.0`, `npm@11.6.2`) via `package.json`.
+
+If Volta is installed, versions are selected automatically in this project.
 
 ```bash
 npm install
